@@ -7,9 +7,11 @@ post '/narikiri' do
   headers 'content-type' => 'application/json'
 
   emoji, message = params[:text].partition(' ').values_at(0,2)
+  emoji.delete!(':')
+
   {
     response_type: "in_channel",
-    icon_emoji: emoji,
+    icon_emoji: ":#{emoji}:",
     text: message, 
   }.to_json
 end
