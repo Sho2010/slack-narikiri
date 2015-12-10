@@ -9,7 +9,7 @@ post '/narikiri' do
   emoji, message = params[:text].partition(' ').values_at(0,2)
   {
     response_type: "in_channel",
-    emoji: emoji, 
+    icon_emoji: emoji,
     text: message, 
   }.to_json
 end
