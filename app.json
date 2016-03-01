@@ -1,0 +1,23 @@
+{
+  "name": "Slack narikiri",
+  "description": "narikiri slash-command",
+  "repository": "https://github.com/sho2010/slack-narikiri",
+  "keywords": ["slack"],
+  "env": {
+    "SLACK_TOKEN": {
+      "description": "A secret key for slack message API token.",
+      "value": "xoxp-",
+      "required": true
+    },
+    "NARIKIRI_LOG_CHANNEL": {
+      "description": "notify channel narikiri usage if required.",
+      "value": "#narikiri-log", 
+      "required": false 
+    },
+    "VERIFICATION_TOKEN": {
+      "description": "slash-command token from slack",
+      "value": "" ,
+      "required": true 
+    }
+  }
+}
