@@ -1,0 +1,8 @@
+narikiri:
+  image: 'sho2010/slack-narikiri:latest'
+  environment:
+    - SLACK_TOKEN=YOUR MESSAGE API TOKEN
+    - NARIKIRI_LOG_CHANNEL=#narikiri-log
+    - VERIFICATION_TOKEN=YOUR SLASH COMMAND VERIFY TOKEN
+  ports:
+    - '8000:8000'
