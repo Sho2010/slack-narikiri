@@ -17,7 +17,7 @@ end
 
 def post_log_message(slack, params)
   return if ENV['NARIKIRI_LOG_CHANNEL'].blank?
-  log = "channel:`#{params[:channel_name]}` , user:`#{params[:user_name]}` , message:`#{params[:text]}`"
+  log = "channel:`##{params[:channel_name]}` , user:`#{params[:user_name]}` , message:`#{params[:text]}`"
   slack.chat_postMessage(channel: ENV['NARIKIRI_LOG_CHANNEL'], text: log, username: params[:user_name])
 end
 
